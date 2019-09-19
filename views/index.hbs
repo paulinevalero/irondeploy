@@ -1,0 +1,42 @@
+<h1 class="title is-2 has-text-centered title-home">Welcome Ironfriend</h1>
+<div class="columns is-multiline is-mobile is-centered">
+	<div class="column is-one-third">
+		<div class="box home">
+			<span class="title is-5">My profile</span>
+			<div class="picture x4 " style="background-image: url('{{user.img}}')"></div>
+			<div class="columns is-mobile is-centered">
+				<div class="column">
+					<p><strong>Status: </strong>{{user.status}}</p>
+					{{#if confirmationCode}}
+					<div>
+						<p>Didn't recived a verification email? <a class="button is-text" href="/profile/reset-code">Send again</a></p>
+					</div>
+					{{/if}}
+					<p class="subtitle is-6 name">{{user.name}} {{user.lastname}}</p>
+					<a class="button is-blue is-fullwidth" href="/profile">View info</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column is-one-third">
+		<div class="box home">
+			<div class="columns is-mobile is-centered">
+				<div class="column">
+					<p class="title is-5">Resources</p>
+					<a href="/profile/resources" class="icon resource">
+						<i class="fas fa-plus-circle"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column is-one-third">
+		<div class="box home">
+			<div class="columns is-mobile is-centered">
+				<div class="column">
+					<p class="title is-5">Latest comments</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

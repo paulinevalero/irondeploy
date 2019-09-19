@@ -1,0 +1,48 @@
+<div class="columns is-desktop is-centered">
+	<div class="column is-half">
+		<div class="box">
+			<h1 class="title is-2">{{this.name}}</h1>
+			<p class="subtitle is-4">url: <a href="{{this.url}}">{{this.url}}</a></p>
+			<p class="subtitle is-6 has-text-grey">Last update: <strong class="has-text-grey">{{this.updatedAt}}</strong></p>
+
+			<hr>
+			<div class="comments">
+				{{#each comments as |comment|}}
+
+				<div class="comment">
+					<div class="comment-user">
+						<span class="comment-pic" style="background-image: url('{{comment.creator.img}}')"></span>
+						<span class="comment-name">{{comment.creator.name}}</span>
+					</div>
+					<div class="comment-content">
+						<p class="comment-text">{{comment.comment}}</p>
+						<img class="comment-img" src="{{comment.picPath}}" alt="{{comment.picName}}" width="100px">
+					</div>
+				</div>
+				{{/each}}
+			</div>
+			<form action="/profile/resource/{{_id}}/comment" method="POST" enctype="multipart/form-data">
+				<hr>
+				<textarea class="textarea" placeholder="Your comment here" name="comment"></textarea>
+				<div class="field">
+					<div class="file is-primary">
+						<label class="file-label">
+							<input class="file-input" type="file" name="commentImg">
+							<span class="file-cta">
+								<span class="file-icon">
+									<i class="far fa-image"></i>
+								</span>
+								<span class="file-label">
+									attach image to reply
+								</span>
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="buttons">
+					<input type="submit" value="Leave a reply" class="button is-info is-fullwidth">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

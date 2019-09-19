@@ -1,0 +1,28 @@
+<div class="columns is-desktop is-centered">
+	<div class="column is-half">
+		<h1 class="title is-2">You're gonna edit your profile</h1>
+		<hr>
+		<div class="box">
+			<form action="/profile/edit?userid={{_id}}" method="POST" enctype="multipart/form-data">
+
+				<input type="file" name="photo">
+
+				<div class="field">
+					<label class="label">Name</label>
+					<div class="control">
+						<input class="input" type="text" name="name" value="{{this.name}}">
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="label">Last name</label>
+					<div class="control">
+						<input class="input" type="text" name="lastname" value="{{this.lastname}}">
+					</div>
+				</div>
+
+				<input class="button is-fullwidth is-info" type="submit" value="Update Profile">
+			</form>
+		</div>
+	</div>
+</div>

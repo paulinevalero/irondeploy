@@ -1,0 +1,56 @@
+<div class="columns is-desktop is-centered">
+	<div class="column is-half">
+		<h1 class="title is-2 has-text-centered">Create your Ironfriend Account </h1>
+		<hr>
+		<div class="box">
+			<form action="/auth/signup" method="POST">
+				<div class="field is-horizontal">
+					<div class="field-body">
+						<div class="field">
+							<label class="label">Name:</label>
+							<p class="control is-expanded has-icons-left">
+								<input class="input" type="text" placeholder="Name" name="name">
+								<span class="icon is-small is-left">
+									<i class="fas fa-user"></i>
+								</span>
+							</p>
+						</div>
+						<div class="field">
+							<label class="label">Last name:</label>
+							<p class="control is-expanded">
+								<input class="input" type="text" placeholder="Last name" name="lastname" >
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="field">
+					<label class="label">Email:</label>
+					<div class="control has-icons-left">
+						<input class="input" type="email" name="email" placeholder="mail@gmail.com">
+						<span class="icon is-small is-left">
+							<i class="fas fa-envelope"></i>
+						</span>
+					</div>
+				</div>
+
+				<div class="field">
+					<label class="label">Password:</label>
+					<div class="control has-icons-left">
+						<input class="input" type="password" name="password" placeholder="*******">
+						<span class="icon is-small is-left">
+							<i class="fas fa-lock"></i>
+						</span>
+					</div>
+				</div>
+				<input class="button is-fullwidth is-info" type="submit" value="Sign up">
+				<hr>
+				<div class="field">
+					<div class="control">
+						<p class="link-cont">Already have an account? <a class="link-marging-sides" href="login">Log in</a></p>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="columns is-desktop is-centered">
+	<div class="column is-half">
+		<h1 class="title is-2 has-text-centered">My profile</h1>
+		<hr>
+		<div class="box">
+			<div class="picture x8 " style="background-image: url('{{this.img}}')"></div>
+			<div class="ironcenter">
+
+				<p class="title is-4">{{this.name}} {{this.lastname}}</p>
+				<p class="subtitle is-6">{{this.email}}</p>
+			</div>
+
+			<a class="ironback icon ironicon-top-right" href="/profile/edit?userid={{this._id}}">
+				<i class="far fa-edit"></i>
+			</a>
+			<hr>
+			<div class="buttons is-right">
+				<a href="/profile/resources" class="button is-text">
+				<span>View Resources</span>
+				<span class="icon is-small">
+					<i class="fas fa-chevron-right"></i>
+				</span>
+			</a>
+			</div>
+
+		</div>
+	</div>
+</div>
